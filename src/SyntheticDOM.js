@@ -1,5 +1,7 @@
 /* @flow */
 
+var core = require('core-js/library');
+
 type Attr = [string, string];
 type MapList = {[key: string]: boolean};
 
@@ -41,7 +43,7 @@ export class ElementNode extends Node {
     let isSelfClosing = (SELF_CLOSING[name] === true);
     this.nodeType = NODE_TYPE_ELEMENT;
     this.nodeName = name;
-    this.attributes = (attributes == null) ? new Map() : new Map(attributes);
+    this.attributes = (attributes == null) ? new core.Map() : new core.Map(attributes);
     this.childNodes = [];
     this.isSelfClosing = isSelfClosing;
     if (!isSelfClosing && childNodes) {

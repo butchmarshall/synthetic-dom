@@ -11,7 +11,9 @@
     "test": "npm run lint && npm run typecheck && npm run test-src",
     "test-src": "mocha src/__tests__/*.js src/**/__tests__/*.js"
   },
-  "dependencies": {},
+  "dependencies": {
+    "core-js": "^2.4.1"
+  },
   "devDependencies": {
     "babel-cli": "^6.7.5",
     "babel-core": "^6.7.6",
